@@ -4,4 +4,4 @@ db.produtos.createIndex(
   },
   { default_language: "pt" }
 );
-db.produtos.find({ $text: { $search: "\"feito com\"" } });
+db.produtos.count({ $text: { $search: "\"feito com\"" } });
