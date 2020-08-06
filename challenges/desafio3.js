@@ -1,12 +1,10 @@
-db.produtos.update(
+db.produtos.updateMany(
   { avaliacao: { $exists: false } },
   { $set: { avaliacao: NumberInt("0") } },
-  { multi: true }
 );
-db.produtos.update(
+db.produtos.updateMany(
   { tags: { $all: ['bovino'] } },
   { $inc: { avaliacao: 5 } },
-  { multi: true }
 );
 db.produtos.update(
   { tags: { $all: ['ave'] } },
