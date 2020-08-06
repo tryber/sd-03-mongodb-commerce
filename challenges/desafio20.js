@@ -1,4 +1,4 @@
-db.produtos.update(
+db.produtos.updateOne(
   { nome:  "Big Mac" },
   { $unset: { curtidas: '' } }
 );

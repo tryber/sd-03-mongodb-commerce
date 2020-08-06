@@ -1,4 +1,4 @@
-db.produtos.update(
+db.produtos.updateMany(
   {
     nome: {
       $not: { $eq: "McChicken" }
