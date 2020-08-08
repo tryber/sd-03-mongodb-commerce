@@ -1,6 +1,6 @@
-db.produtos.updateMany(
-  { },
-  { $currentDate: { ultimaModificacao: true } }
+db.produtos.updateOne(
+  { nome: "Big Mac" },
+  { $currentDate: { ultimaModificacao: { $type: "date" } } }
 );
 
 db.produtos.find(
