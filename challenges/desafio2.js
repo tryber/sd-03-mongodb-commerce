@@ -14,4 +14,3 @@ db.produtos.updateMany(
       _id: 0,
     }
   );
-  
