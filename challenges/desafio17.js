@@ -1,2 +1,2 @@
-db.produtos.createIndex({descricao: "text" });
-db.articles.find({ $text: {$search: "frango hamburguer", $language: "pt"}}).count();
+db.produtos.createIndex({ "descricao": "text"}, { default_language: "portuguese"});
+db.produtos.count({ $text: { $search: "frango hamburguer" } });
