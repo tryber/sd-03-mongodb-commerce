@@ -8,7 +8,7 @@ db.produtos.updateMany(
     },
   },
   { $push:
-    { "tags": "sódio" },
+    { "tags": "contém sódio" },
   },
 );
 
