@@ -8,4 +8,3 @@ db.produtos.find({}, {
   ingredientes: true,
   _id: false,
 });
-

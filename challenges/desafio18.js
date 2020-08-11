@@ -10,4 +10,3 @@ db.produtos.count(
     }
   }
 );
-
