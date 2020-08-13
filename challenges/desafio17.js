@@ -1,5 +1,5 @@
 db.produtos.count(
     {$text: {
-        $search : "frango", "hamburguer"
+        $search : "frango hamburguer"
     }} 
 );
