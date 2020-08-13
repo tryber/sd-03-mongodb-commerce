@@ -8,14 +8,14 @@ db.produtos.updateMany(
 db.produtos.update(
     {"nome": "Big Mac"},
     {
-        "vendasPorDia.3": {$inc: 60}
+        $inc: {"vendasPorDia.3": 60}
     }
 );
 
 db.produtos.updateMany(
-    {"tag": {$in: ["bovino","pão"]}},
+    {"tags": {$in: ["bovino","pão"]}},
     {
-        "vendasPorDia.6": {$inc: 120}
+        $inc: {"vendasPorDia.6": 120}
     }
 );
 
