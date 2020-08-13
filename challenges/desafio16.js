@@ -1,5 +1,5 @@
 db.produtos.count(
-    {$size: {
-        "ingredientes": 4
+    {"ingredientes": {
+        $size : 4
     }} 
 );
