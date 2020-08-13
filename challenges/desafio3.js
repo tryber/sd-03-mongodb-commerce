@@ -10,18 +10,14 @@ db.produtos.updateMany(
 db.produtos.updateMany(
     {"tags":"bovino"},
     {
-      $set: {
-        "avaliacao": {$add: 5}    
-      }
+        $inc: {"avaliacao": 5}
     }
 );
 
 db.produtos.updateMany(
     {"tags":"ave"},
-    {
-      $set: {
-        "avaliacao": {$add: 3}    
-      }
+    { 
+        $inc: {"avaliacao": 3}
     }
 );
 
