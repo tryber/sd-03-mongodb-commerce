@@ -6,7 +6,7 @@ db.produtos.updateMany(
 );
 
 db.produtos.find(
-    {"ultimaModificacao": {$exists: true}},
+    {},
     {
       "nome": 1,
       "ingredientes":1,
