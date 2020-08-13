@@ -1,5 +1,6 @@
 db.produtos.updateMany(
-    {"valoresNutricionais.percentual": {$gte: 40}},
+    {$and: [{"valoresNutricionais.percentual": {$gte: 40}},
+    {"valoresNutricionais.tipo": "sódio"}]},
     { 
       $push: { "tags": "muito sódio"}
     }
