@@ -1,5 +1,4 @@
-db.produtos.updateMany({}, {
-  $push: { "tags": { $each: ["combo", "tasty"], $sort: 1 } },
-});
+db.produtos.updateMany({},
+  { $push: { "valoresNutricionais": { $each: [], $sort: { "percentual": -1 } } } });
 
-db.produtos.find({}, { "nome": 1, "tags": 1, "_id": 0 }).pretty();
+db.produtos.find({}, { "nome": 1, "valoresNutricionais": 1, "_id": 0 }).pretty();
