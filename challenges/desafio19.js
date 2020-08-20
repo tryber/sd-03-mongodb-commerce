@@ -1,10 +1,11 @@
 db.produtos.updateMany({}, {
-    $set: {
-        criadoPor: "Ronald McDonald"
+    $rename: {
+        descricao: "descricaoSite"
     }
 });
 db.produtos.find({}, {
     _id: 0,
     nome: 1,
-    criadoPor: 1
+    descricao: 1,
+    descricaoSite: 1
 });
